@@ -1,3 +1,4 @@
+//import winston
 const winston = require('winston');
 
 const logger = winston.createLogger({
@@ -14,3 +15,21 @@ const logger = winston.createLogger({
   ],
 });
   module.exports = logger;
+
+//Función con error
+function numeroPositivo(num) {
+  num = -num;
+  if (num >= 0) {
+    console.log("El número es positivo");
+  } else {
+    return false
+  } 
+}
+
+try {
+  const numPositivo = numeroPositivo(num);
+  console.log(numPositivo);
+}  
+catch(e) {
+  console.log("Hubo un error. El número no es positivo");  
+} 
